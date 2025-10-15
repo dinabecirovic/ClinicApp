@@ -275,10 +275,8 @@ C:\Users\Dina\Desktop\ClinicApp\ClinicApp\bin\Debug\net8.0-windows\runtimes\win-
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\ClinicApp.csproj.AssemblyReference.cache
-C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Styles\GlobalStyles.baml
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\App.baml
-C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\ClinicApp_MarkupCompile.cache
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\ClinicApp.g.resources
@@ -293,3 +291,15 @@ C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\refint\Clinic
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\ClinicApp.pdb
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\ClinicApp.genruntimeconfig.cache
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\ref\ClinicApp.dll
+C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\AdministrationWindow.baml
+C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\AppointmentsWindow.baml
+C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\MainWindow.baml
+C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\MedicalRecordsWindow.baml
+C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\PatientsWindow.baml
+C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\StaffWindow.baml
+C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\AdministrationWindow.g.cs
+C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\AppointmentsWindow.g.cs
+C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
+C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\MedicalRecordsWindow.g.cs
+C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\PatientsWindow.g.cs
+C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\StaffWindow.g.cs

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\App.xaml
-2-710662048
+7-789212990
 
-23-1602912138
+35-1628888750
 228-775107893
-MainWindow.xaml;Styles\GlobalStyles.xaml;
+Styles\GlobalStyles.xaml;Views\AdministrationWindow.xaml;Views\AppointmentsWindow.xaml;Views\MainWindow.xaml;Views\MedicalRecordsWindow.xaml;Views\PatientsWindow.xaml;Views\StaffWindow.xaml;
 
 False
 

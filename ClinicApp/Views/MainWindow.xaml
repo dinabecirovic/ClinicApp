@@ -1,0 +1,66 @@
+﻿<Window x:Class="ClinicApp.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Klinička Aplikacija - Glavni Meni" 
+        Height="650" 
+        Width="650"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Naslov -->
+        <TextBlock Grid.Row="0" 
+                   Text="KLINIČKA APLIKACIJA" 
+                   FontSize="30" 
+                   FontWeight="Bold" 
+                   HorizontalAlignment="Center"
+                   Margin="0,20,0,30"/>
+
+        <!-- Glavni Meni Dugmad -->
+        <StackPanel Grid.Row="1" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Stretch"
+                    Margin="20,0,20,20">
+
+            <Button Content="Pacijenti" 
+                    Height="70" 
+                    FontSize="20"
+                    FontWeight="SemiBold"
+                    Click="OpenPatients_Click" 
+                    Margin="0,10"/>
+
+            <Button Content="Termini" 
+                    Height="70" 
+                    FontSize="20"
+                    FontWeight="SemiBold"
+                    Click="OpenAppointments_Click" 
+                    Margin="0,10"/>
+
+            <Button Content="Medicinski Kartoni" 
+                    Height="70" 
+                    FontSize="20"
+                    FontWeight="SemiBold"
+                    Click="OpenMedicalRecords_Click" 
+                    Margin="0,10"/>
+
+            <Button Content="Osoblje" 
+                    Height="70" 
+                    FontSize="20"
+                    FontWeight="SemiBold"
+                    Click="OpenStaff_Click" 
+                    Margin="0,10"/>
+
+            <Button Content="Administracija (Fakture i Izveštaji)" 
+                    Height="70" 
+                    FontSize="20"
+                    FontWeight="SemiBold"
+                    Click="OpenAdministration_Click" 
+                    Margin="0,10"/>
+        </StackPanel>
+    </Grid>
+</Window>
