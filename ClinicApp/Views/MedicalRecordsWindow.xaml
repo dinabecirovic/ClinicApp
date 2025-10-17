@@ -4,9 +4,7 @@
         Title="Medicinski Kartoni" 
         Height="650" 
         Width="1000"
-        WindowStartupLocation="CenterScreen"
-        Loaded="Window_Loaded">
-
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -17,14 +15,18 @@
         <!-- Izbor pacijenta -->
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
             <Label Content="Izaberite Pacijenta:"/>
-            <ComboBox x:Name="RecordPatientSelector" 
-                      Width="300" 
-                      DisplayMemberPath="FullName" 
-                      SelectionChanged="RecordPatient_Changed"/>
+            <ComboBox Width="300" 
+                      DisplayMemberPath="FullName"
+                      ItemsSource="{Binding Patients}"
+                      SelectedItem="{Binding SelectedPatient, Mode=TwoWay}"/>
         </StackPanel>
 
         <!-- DataGrid za kartone -->
-        <DataGrid x:Name="RecordsDataGrid" Grid.Row="1" Margin="10">
+        <DataGrid Grid.Row="1" 
+                  Margin="10"
+                  ItemsSource="{Binding MedicalRecords}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                 <DataGridTextColumn Header="Datum" Binding="{Binding Date, StringFormat=dd.MM.yyyy}" Width="120"/>
@@ -39,16 +41,16 @@
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Dijagnoza:" Width="100"/>
-                    <TextBox x:Name="RecordDiagnosis" Width="250"/>
+                    <TextBox Width="250" Text="{Binding Diagnosis, UpdateSourceTrigger=PropertyChanged}"/>
                     <Label Content="Tretman:" Width="100"/>
-                    <TextBox x:Name="RecordTreatment" Width="250"/>
+                    <TextBox Width="250" Text="{Binding Treatment, UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Napomene:" Width="100"/>
-                    <TextBox x:Name="RecordNotes" Width="620"/>
+                    <TextBox Width="620" Text="{Binding Notes, UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Content="Dodaj Karton" Click="AddRecord_Click"/>
+                    <Button Content="Dodaj Karton" Command="{Binding AddRecordCommand}"/>
                 </StackPanel>
             </StackPanel>
         </GroupBox>

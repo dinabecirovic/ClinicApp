@@ -4,9 +4,7 @@
         Title="Upravljanje Osobljem" 
         Height="700" 
         Width="900"
-        WindowStartupLocation="CenterScreen"
-        Loaded="Window_Loaded">
-
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -21,7 +19,11 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <DataGrid x:Name="DoctorsDataGrid" Grid.Row="0" Margin="5">
+                <DataGrid Grid.Row="0" 
+                          Margin="5"
+                          ItemsSource="{Binding Doctors}"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                         <DataGridTextColumn Header="Ime" Binding="{Binding FirstName}" Width="*"/>
@@ -32,13 +34,12 @@
 
                 <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5">
                     <Label Content="Ime:"/>
-                    <TextBox x:Name="DoctorFirstName" Width="120"/>
+                    <TextBox Width="120" Text="{Binding DoctorFirstName, UpdateSourceTrigger=PropertyChanged}"/>
                     <Label Content="Prezime:"/>
-                    <TextBox x:Name="DoctorLastName" Width="120"/>
+                    <TextBox Width="120" Text="{Binding DoctorLastName, UpdateSourceTrigger=PropertyChanged}"/>
                     <Label Content="Specijalnost:"/>
-                    <TextBox x:Name="DoctorSpecialty" Width="150"/>
-                    <Button Content="Dodaj Lekara" Click="AddDoctor_Click"/>
-                    <Button Content="Osveži" Click="RefreshDoctors_Click"/>
+                    <TextBox Width="150" Text="{Binding DoctorSpecialty, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Content="Dodaj Lekara" Command="{Binding AddDoctorCommand}"/>
                 </StackPanel>
             </Grid>
         </GroupBox>
@@ -51,7 +52,11 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <DataGrid x:Name="NursesDataGrid" Grid.Row="0" Margin="5">
+                <DataGrid Grid.Row="0" 
+                          Margin="5"
+                          ItemsSource="{Binding Nurses}"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                         <DataGridTextColumn Header="Ime" Binding="{Binding FirstName}" Width="*"/>
@@ -62,13 +67,12 @@
 
                 <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5">
                     <Label Content="Ime:"/>
-                    <TextBox x:Name="NurseFirstName" Width="120"/>
+                    <TextBox Width="120" Text="{Binding NurseFirstName, UpdateSourceTrigger=PropertyChanged}"/>
                     <Label Content="Prezime:"/>
-                    <TextBox x:Name="NurseLastName" Width="120"/>
+                    <TextBox Width="120" Text="{Binding NurseLastName, UpdateSourceTrigger=PropertyChanged}"/>
                     <Label Content="Smena:"/>
-                    <TextBox x:Name="NurseShift" Width="150"/>
-                    <Button Content="Dodaj Sestru" Click="AddNurse_Click"/>
-                    <Button Content="Osveži" Click="RefreshNurses_Click"/>
+                    <TextBox Width="150" Text="{Binding NurseShift, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Content="Dodaj Sestru" Command="{Binding AddNurseCommand}"/>
                 </StackPanel>
             </Grid>
         </GroupBox>

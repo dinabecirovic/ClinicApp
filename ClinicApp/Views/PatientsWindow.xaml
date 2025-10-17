@@ -4,9 +4,7 @@
         Title="Upravljanje Pacijentima" 
         Height="600" 
         Width="900"
-        WindowStartupLocation="CenterScreen"
-        Loaded="Window_Loaded">
-
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -14,7 +12,12 @@
         </Grid.RowDefinitions>
 
         <!-- DataGrid za pacijente -->
-        <DataGrid x:Name="PatientsDataGrid" Grid.Row="0" Margin="10">
+        <DataGrid Grid.Row="0" 
+                  Margin="0,0,10,10"
+                  ItemsSource="{Binding Patients}"
+                  SelectedItem="{Binding SelectedPatient, Mode=TwoWay}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                 <DataGridTextColumn Header="Ime" Binding="{Binding FirstName}" Width="*"/>
@@ -29,18 +32,17 @@
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Ime:" Width="100"/>
-                    <TextBox x:Name="PatientFirstName" Width="150"/>
+                    <TextBox Width="150" Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}"/>
                     <Label Content="Prezime:" Width="100"/>
-                    <TextBox x:Name="PatientLastName" Width="150"/>
+                    <TextBox Width="150" Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}"/>
                     <Label Content="Datum:" Width="80"/>
-                    <DatePicker x:Name="PatientBirthDate" Width="120"/>
+                    <DatePicker Width="120" SelectedDate="{Binding BirthDate, Mode=TwoWay}"/>
                     <Label Content="Broj Kartona:" Width="100"/>
-                    <TextBox x:Name="PatientRecordNumber" Width="100"/>
+                    <TextBox Width="100" Text="{Binding RecordNumber, UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Content="Dodaj" Click="AddPatient_Click"/>
-                    <Button Content="Obriši Odabranog" Click="DeletePatient_Click"/>
-                    <Button Content="Osveži" Click="Refresh_Click"/>
+                    <Button Content="Dodaj" Command="{Binding AddPatientCommand}" Width="149"/>
+                    <Button Content="Obriši Odabranog" Command="{Binding DeletePatientCommand}"/>
                 </StackPanel>
             </StackPanel>
         </GroupBox>

@@ -303,3 +303,4 @@ C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\MainWin
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\MedicalRecordsWindow.g.cs
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\PatientsWindow.g.cs
 C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\Views\StaffWindow.g.cs
+C:\Users\Dina\Desktop\ClinicApp\ClinicApp\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
